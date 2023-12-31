@@ -1,0 +1,13 @@
+
+
+lib/core.js
+
+# 7783
+        _resize_editor: function (e) {
+            const resizeInterval = context.element.editorArea.offsetHeight + (e.clientY - core._variable.resizeClientY);
+            const h = (resizeInterval < core._variable.minResizingSize ? core._variable.minResizingSize : resizeInterval);
+            context.element.wysiwygFrame.style.height = context.element.code.style.height = h + 'px';
+            core._variable.resizeClientY = e.clientY;
+            if (!util.isResizeObserverSupported) core.__callResizeFunction(h, null);
+        },
+
