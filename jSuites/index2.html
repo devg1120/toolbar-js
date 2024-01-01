@@ -1,0 +1,44 @@
+<html>
+<script src="https://jsuites.net/v4/jsuites.js"></script>
+<link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons" />
+
+<div id="toolbar"></div>
+ 
+<script>
+var toolbar = jSuites.toolbar(document.getElementById('toolbar'), {
+    container: true,
+    items:[
+        {
+            type: 'icon',
+            content: 'save',
+            onclick: function () {
+                console.log('save something');
+            }
+        },
+        {
+            type: 'label',
+            content: 'Text item',
+            onclick: function() {
+                console.log('action');
+            }
+        },
+        {
+            type: 'divisor',
+        },
+        {
+            type: 'select',
+            data: [ 'Verdana', 'Arial', 'Courier New' ],
+            width: '160px',
+            render: function(e) {
+                return '<span style="font-family:' + e + '">' + e + '</span>';
+            },
+            onchange: function(a,b,c,d) {
+                console.log('font-family: ' + d);
+            }
+        }
+    ],
+});
+</script>
+</html>
+

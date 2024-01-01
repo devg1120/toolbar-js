@@ -1,0 +1,34 @@
+<html>
+<script src="https://jsuites.net/v4/jsuites.js"></script>
+<link rel="stylesheet" href="https://jsuites.net/v4/jsuites.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons" />
+
+ 
+<div id='toolbar'></div>
+ 
+<script>
+jSuites.toolbar(document.getElementById('toolbar'), {
+    container: true,
+    items:[
+    {
+        type: 'icon',
+        content: '<img src="https://image.flaticon.com/icons/svg/95/95645.svg" width="18px;">',
+        title: 'Message',
+        onclick: function() {
+            // Do something
+            console.log('Message');
+        }
+    },
+    {
+        type: 'icon',
+        content: '<img src="https://image.flaticon.com/icons/svg/733/733547.svg" width="18px;">',
+        title: 'Facebook',
+        onclick: function() {
+            // Do something
+            console.log('Facebook,etc');
+        }
+    }]
+})
+</script>
+</html>
+
